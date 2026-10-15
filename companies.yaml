@@ -1,0 +1,321 @@
+# Companies scanned through public career-site APIs.
+# tier: A = top-paying / hardest, B = strong product, C = solid mid-size & GCCs, D = services / high volume
+# type: greenhouse | lever | ashby | smartrecruiters | workday | amazon | atlassian
+companies:
+  - {name: Stripe, tier: A, type: greenhouse, token: stripe}
+  - {name: Databricks, tier: A, type: greenhouse, token: databricks}
+  - {name: Rubrik, tier: A, type: greenhouse, token: rubrik}
+  - {name: Razorpay, tier: B, type: greenhouse, token: razorpaysoftwareprivatelimited}
+  - {name: Groww, tier: B, type: greenhouse, token: groww}
+  - {name: Twilio, tier: C, type: greenhouse, token: twilio}
+  - {name: Okta, tier: C, type: greenhouse, token: okta}
+  - {name: InMobi, tier: B, type: greenhouse, token: inmobi}
+  - {name: Thoughtworks, tier: D, type: greenhouse, token: thoughtworks}
+  - {name: CRED, tier: B, type: lever, token: cred}
+  - {name: Meesho, tier: B, type: lever, token: meesho}
+  - {name: Paytm, tier: B, type: lever, token: paytm}
+  - {name: Zeta, tier: C, type: lever, token: zeta}
+  - {name: Coupa, tier: C, type: lever, token: coupa}
+  - {name: Swiggy, tier: B, type: smartrecruiters, token: swiggy}
+  - {name: Freshworks, tier: C, type: smartrecruiters, token: freshworks}
+  - {name: ServiceNow, tier: B, type: smartrecruiters, token: servicenow}
+  - {name: Amazon, tier: A, type: amazon, queries: ['software development engineer', 'SDE I', 'backend engineer java']}
+  - {name: Atlassian, tier: A, type: atlassian}
+  - {name: Visa, tier: B, type: workday, tenant: visa, dc: wd5, site: Visa}
+  - {name: Salesforce, tier: B, type: workday, tenant: salesforce, dc: wd12, site: External_Career_Site}
+  - {name: Adobe, tier: A, type: workday, tenant: adobe, dc: wd5, site: external_experienced}
+  - {name: Cisco, tier: B, type: workday, tenant: cisco, dc: wd5, site: Cisco_Careers}
+  - {name: Mastercard, tier: B, type: workday, tenant: mastercard, dc: wd1, site: CorporateCareers}
+  - {name: Workday, tier: C, type: workday, tenant: workday, dc: wd5, site: Workday}
+  - {name: Capital One, tier: C, type: workday, tenant: capitalone, dc: wd12, site: Capital_One}
+  - {name: Wells Fargo, tier: C, type: workday, tenant: wf, dc: wd1, site: WellsFargoJobs}
+  - {name: State Street, tier: C, type: workday, tenant: statestreet, dc: wd1, site: Global}
+  - {name: Target, tier: C, type: workday, tenant: target, dc: wd5, site: targetcareers}
+  - {name: "Lowe's", tier: C, type: workday, tenant: lowes, dc: wd5, site: LWS_External_CS}
+  - {name: Citi, tier: C, type: workday, tenant: citi, dc: wd5, site: 2}
+  - {name: Deutsche Bank, tier: C, type: workday, tenant: db, dc: wd3, site: DBWebsite}
+  - {name: Broadcom, tier: B, type: workday, tenant: broadcom, dc: wd1, site: External_Career}
+  - {name: Sabre, tier: C, type: workday, tenant: sabre, dc: wd1, site: SabreJobs}
+  - {name: Fidelity, tier: C, type: workday, tenant: fmr, dc: wd1, site: FidelityCareers}
+  - {name: Barclays, tier: C, type: workday, tenant: barclays, dc: wd3, site: External_Career_Site_Barclays}
+  - {name: Morgan Stanley, tier: B, type: workday, tenant: ms, dc: wd5, site: External}
+  - {name: Expedia, tier: B, type: workday, tenant: expedia, dc: wd108, site: search}
+  - {name: PayPal, tier: B, type: workday, tenant: paypal, dc: wd1, site: jobs}
+  - {name: Accenture, tier: D, type: workday, tenant: accenture, dc: wd103, site: AccentureCareers}
+  - {name: Airbnb, tier: A, type: greenhouse, token: airbnb}
+  - {name: Anthropic, tier: A, type: greenhouse, token: anthropic}
+  - {name: Canva, tier: A, type: smartrecruiters, token: canva}
+  - {name: Celonis, tier: A, type: greenhouse, token: celonis}
+  - {name: Cloudflare, tier: A, type: greenhouse, token: cloudflare}
+  - {name: Coinbase, tier: A, type: greenhouse, token: coinbase}
+  - {name: Datadog, tier: A, type: greenhouse, token: datadog}
+  - {name: Dropbox, tier: A, type: greenhouse, token: dropbox}
+  - {name: Druva, tier: A, type: greenhouse, token: druva}
+  - {name: Elastic, tier: A, type: greenhouse, token: elastic}
+  - {name: Figma, tier: A, type: greenhouse, token: figma}
+  - {name: Fivetran, tier: A, type: greenhouse, token: fivetran}
+  - {name: Gitlab, tier: A, type: greenhouse, token: gitlab}
+  - {name: Instacart, tier: A, type: greenhouse, token: instacart}
+  - {name: Lyft, tier: A, type: greenhouse, token: lyft}
+  - {name: MongoDB, tier: A, type: greenhouse, token: mongodb}
+  - {name: New Relic, tier: A, type: greenhouse, token: newrelic}
+  - {name: Notion, tier: A, type: ashby, token: notion}
+  - {name: OpenAI, tier: A, type: ashby, token: openai}
+  - {name: PagerDuty, tier: A, type: greenhouse, token: pagerduty}
+  - {name: Palantir, tier: A, type: lever, token: palantir}
+  - {name: Pinterest, tier: A, type: greenhouse, token: pinterest}
+  - {name: Pure Storage, tier: A, type: greenhouse, token: purestorage}
+  - {name: Reddit, tier: A, type: greenhouse, token: reddit}
+  - {name: Robinhood, tier: A, type: greenhouse, token: robinhood}
+  - {name: Roblox, tier: A, type: greenhouse, token: roblox}
+  - {name: Snowflake, tier: A, type: ashby, token: snowflake}
+  - {name: Sumo Logic, tier: A, type: greenhouse, token: sumologic}
+  - {name: Workato, tier: A, type: greenhouse, token: workato}
+  - {name: Zscaler, tier: A, type: greenhouse, token: zscaler}
+  - {name: Cars24, tier: B, type: smartrecruiters, token: cars24}
+  - {name: Grab, tier: B, type: smartrecruiters, token: grab}
+  - {name: Mindtickle, tier: B, type: lever, token: mindtickle}
+  - {name: Navi, tier: B, type: ashby, token: navi}
+  - {name: Observe.AI, tier: B, type: greenhouse, token: observeai}
+  - {name: Porter, tier: B, type: greenhouse, token: porter}
+  - {name: Remote, tier: B, type: greenhouse, token: remote}
+  - {name: Sarvam AI, tier: B, type: ashby, token: sarvam}
+  - {name: Slice, tier: B, type: greenhouse, token: slice}
+  - {name: Toast, tier: B, type: greenhouse, token: toast}
+  - {name: Unacademy, tier: B, type: smartrecruiters, token: unacademy}
+  - {name: Upstox, tier: B, type: smartrecruiters, token: upstox}
+  - {name: Whatfix, tier: B, type: smartrecruiters, token: whatfix}
+  - {name: Zomato Eternal, tier: B, type: lever, token: eternal}
+  - {name: Adyen, tier: C, type: greenhouse, token: adyen}
+  - {name: Arista, tier: C, type: smartrecruiters, token: aristanetworks}
+  - {name: Brex, tier: C, type: greenhouse, token: brex}
+  - {name: Commvault, tier: C, type: greenhouse, token: commvault}
+  - {name: Continental, tier: C, type: smartrecruiters, token: continental}
+  - {name: Epic Games, tier: C, type: greenhouse, token: epicgames}
+  - {name: Gainsight, tier: C, type: ashby, token: gainsight}
+  - {name: Gusto, tier: C, type: greenhouse, token: gusto}
+  - {name: Ixigo, tier: C, type: smartrecruiters, token: ixigo}
+  - {name: Mcafee, tier: C, type: greenhouse, token: mcafee}
+  - {name: Netskope, tier: C, type: greenhouse, token: netskope}
+  - {name: Plaid, tier: C, type: ashby, token: plaid}
+  - {name: Ramp, tier: C, type: ashby, token: ramp}
+  - {name: Riot Games, tier: C, type: greenhouse, token: riotgames}
+  - {name: Sitecore, tier: C, type: ashby, token: sitecore}
+  - {name: Sophos, tier: C, type: lever, token: sophos}
+  - {name: Squarespace, tier: C, type: greenhouse, token: squarespace}
+  - {name: Tekion, tier: C, type: ashby, token: tekion}
+  - {name: Twitch, tier: C, type: greenhouse, token: twitch}
+  - {name: Wise, tier: C, type: greenhouse, token: wise}
+  - {name: Capco, tier: D, type: greenhouse, token: capco}
+  - {name: Sutherland, tier: D, type: smartrecruiters, token: sutherland}
+  - {name: TCS, tier: D, type: greenhouse, token: tcs}
+  - {name: Valuelabs, tier: D, type: smartrecruiters, token: valuelabs}
+
+# No usable public API: shown as search links. url is optional (India-only direct link); otherwise a LinkedIn search is generated.
+manual_boards:
+  - {name: "Google", tier: B, url: "https://www.google.com/about/careers/applications/jobs/results?location=India&q=software%20engineer&target_level=EARLY&sort_by=date"}
+  - {name: "Microsoft", tier: B, url: "https://jobs.careers.microsoft.com/global/en/search?q=software%20engineer&lc=India&exp=Students%20and%20graduates&l=en_us&pg=1&pgSz=20&o=Recent"}
+  - {name: "Uber", tier: A, url: "https://www.uber.com/global/en/careers/list/?department=Engineering&location=IND-Karnataka-Bangalore"}
+  - {name: "Flipkart", tier: B, url: "https://www.flipkartcareers.com/#!/joblist"}
+  - {name: "Eternal/Zomato", tier: B, url: "https://www.zomato.com/careers"}
+  - {name: "Myntra", tier: B, url: "https://careers.myntra.com/"}
+  - {name: "Oracle OCI", tier: B, url: "https://careers.oracle.com/jobs/#en/sites/jobsearch/requisitions?keyword=software+developer&location=India"}
+  - {name: "SAP Labs", tier: B, url: "https://jobs.sap.com/search/?q=software+developer&locationsearch=India"}
+  - {name: "Goldman Sachs", tier: B, url: "https://www.goldmansachs.com/careers/our-firm/india"}
+  - {name: "JPMorgan", tier: B, url: "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs?keyword=software+engineer&location=India"}
+  - {name: "American Express", tier: B, url: "https://aexp.eightfold.ai/careers?query=software%20engineer&location=India"}
+  - {name: "Amadeus", tier: C, url: "https://careers.amadeus.com/en/jobs?q=software+engineer&location=India"}
+  - {name: "Zoho", tier: B, url: "https://www.zoho.com/careers/"}
+  - {name: "PhonePe", tier: B, url: "https://www.phonepe.com/careers/"}
+  - {name: "Walmart Global Tech", tier: B, url: "https://careers.walmart.com/results?q=software%20engineer&page=1&sort=date&jobCity=Bangalore&jobCountry=IN"}
+  - {name: "Nutanix", tier: C, url: "https://careers.nutanix.com/en/jobs/"}
+  - {name: "Postman", tier: B, url: "https://www.postman.com/company/careers/"}
+  - {name: "Juspay", tier: B, url: "https://juspay.io/careers"}
+  - {name: "Sprinklr", tier: B, url: "https://www.sprinklr.com/careers/"}
+  - {name: "Dream11", tier: B, url: "https://www.dreamsports.group/careers"}
+  - {name: "Arcesium", tier: B, url: "https://www.arcesium.com/careers"}
+  - {name: "Zepto", tier: B, url: "https://www.zeptonow.com/careers"}
+  - {name: "Intuit", tier: C, url: "https://jobs.intuit.com/search-jobs/software%20engineer/India/27595/1"}
+  - {name: "Honeywell", tier: B, url: "https://careers.honeywell.com/en/sites/Honeywell/jobs?keyword=software+engineer&location=India"}
+  - {name: "BNY", tier: B, url: "https://bnymellon.eightfold.ai/careers?query=software%20engineer&location=India"}
+  - {name: "Siemens", tier: B, url: "https://jobs.siemens.com/careers?query=software%20developer&location=India"}
+  - {name: "Dell", tier: B, url: "https://jobs.dell.com/en/search-jobs/software%20engineer/375/1"}
+  - {name: "Capgemini", tier: D, url: "https://www.capgemini.com/in-en/careers/join-capgemini/job-search/"}
+  - {name: "Persistent", tier: C, url: "https://careers.persistent.com/"}
+  - {name: "Nagarro", tier: C, url: "https://www.nagarro.com/en/careers"}
+  - {name: "Globant", tier: C, url: "https://careers.globant.com/en_US/jobs"}
+  - {name: "Booking.com", tier: C, url: "https://jobs.booking.com/booking/jobs?keywords=software%20engineer&location=India"}
+  - {name: "UBS", tier: B, url: "https://jobs.ubs.com/TGnewUI/Search/home/HomeWithPreLoad?partnerid=25008&siteid=5012#keyword=software%20engineer&location=India"}
+  - {name: "TCS Digital/Prime", tier: B, url: "https://www.tcs.com/careers"}
+  - {name: "Infosys PP/DSE", tier: B, url: "https://www.infosys.com/careers/"}
+  - {name: "EPAM", tier: C, url: "https://careers.epam.com/en/jobs?query=java&country=India"}
+  - {name: "Confluent", tier: A}
+  - {name: "HashiCorp", tier: A}
+  - {name: "Grammarly", tier: A}
+  - {name: "Splunk", tier: A}
+  - {name: "Nvidia", tier: A}
+  - {name: "Qualcomm", tier: A}
+  - {name: "DoorDash", tier: A}
+  - {name: "Cohesity", tier: A}
+  - {name: "NetApp", tier: A}
+  - {name: "Zendesk", tier: A}
+  - {name: "HubSpot", tier: A}
+  - {name: "Autodesk", tier: A}
+  - {name: "ShareChat", tier: B}
+  - {name: "Dunzo", tier: B}
+  - {name: "Jupiter", tier: B}
+  - {name: "Spinny", tier: B}
+  - {name: "Urban Company", tier: B}
+  - {name: "Licious", tier: B}
+  - {name: "Ola", tier: B}
+  - {name: "Ola Electric", tier: B}
+  - {name: "Lenskart", tier: B}
+  - {name: "Nykaa", tier: B}
+  - {name: "PharmEasy", tier: B}
+  - {name: "Practo", tier: B}
+  - {name: "PhysicsWallah", tier: B}
+  - {name: "upGrad", tier: B}
+  - {name: "BrowserStack", tier: B}
+  - {name: "Chargebee", tier: B}
+  - {name: "Clevertap", tier: B}
+  - {name: "MoEngage", tier: B}
+  - {name: "WebEngage", tier: B}
+  - {name: "Innovaccer", tier: B}
+  - {name: "Darwinbox", tier: B}
+  - {name: "Zoomcar", tier: B}
+  - {name: "Rapido", tier: B}
+  - {name: "BharatPe", tier: B}
+  - {name: "MobiKwik", tier: B}
+  - {name: "Pine Labs", tier: B}
+  - {name: "Cashfree", tier: B}
+  - {name: "Open Financial", tier: B}
+  - {name: "Zerodha", tier: B}
+  - {name: "Angel One", tier: B}
+  - {name: "Policybazaar", tier: B}
+  - {name: "Acko", tier: B}
+  - {name: "Digit Insurance", tier: B}
+  - {name: "Kreditbee", tier: B}
+  - {name: "Moneyview", tier: B}
+  - {name: "Park+", tier: B}
+  - {name: "Eightfold", tier: B}
+  - {name: "Hasura", tier: B}
+  - {name: "Gupshup", tier: B}
+  - {name: "Exotel", tier: B}
+  - {name: "Yellow.ai", tier: B}
+  - {name: "Haptik", tier: B}
+  - {name: "Ather Energy", tier: B}
+  - {name: "Thoughtspot", tier: B}
+  - {name: "Games24x7", tier: B}
+  - {name: "MPL", tier: B}
+  - {name: "Delhivery", tier: B}
+  - {name: "Shadowfax", tier: B}
+  - {name: "BlackBuck", tier: B}
+  - {name: "Rebel Foods", tier: B}
+  - {name: "Country Delight", tier: B}
+  - {name: "Zetwerk", tier: B}
+  - {name: "Udaan", tier: B}
+  - {name: "OfBusiness", tier: B}
+  - {name: "Skit.ai", tier: B}
+  - {name: "Krutrim", tier: B}
+  - {name: "Uniphore", tier: B}
+  - {name: "Fractal", tier: B}
+  - {name: "Tredence", tier: B}
+  - {name: "Mu Sigma", tier: B}
+  - {name: "Gojek", tier: B}
+  - {name: "Sea Group", tier: B}
+  - {name: "Rippling", tier: B}
+  - {name: "Deel", tier: B}
+  - {name: "Medallia", tier: B}
+  - {name: "Sapient", tier: B}
+  - {name: "MakeMyTrip", tier: C}
+  - {name: "Cleartrip", tier: C}
+  - {name: "Yatra", tier: C}
+  - {name: "EaseMyTrip", tier: C}
+  - {name: "Publicis Sapient", tier: C}
+  - {name: "Hexaware", tier: C}
+  - {name: "Mphasis", tier: C}
+  - {name: "Zensar", tier: C}
+  - {name: "Cyient", tier: C}
+  - {name: "Mindtree", tier: C}
+  - {name: "LTIMindtree", tier: C}
+  - {name: "Coforge", tier: C}
+  - {name: "Birlasoft", tier: C}
+  - {name: "Sonata Software", tier: C}
+  - {name: "Happiest Minds", tier: C}
+  - {name: "Virtusa", tier: C}
+  - {name: "Icertis", tier: C}
+  - {name: "Mckinsey", tier: C}
+  - {name: "Bain", tier: C}
+  - {name: "Klarna", tier: C}
+  - {name: "Revolut", tier: C}
+  - {name: "Checkout.com", tier: C}
+  - {name: "Shopify", tier: C}
+  - {name: "Wix", tier: C}
+  - {name: "VMware", tier: C}
+  - {name: "Veeam", tier: C}
+  - {name: "Ivanti", tier: C}
+  - {name: "BMC", tier: C}
+  - {name: "Informatica", tier: C}
+  - {name: "Talend", tier: C}
+  - {name: "Veritas", tier: C}
+  - {name: "Quest Software", tier: C}
+  - {name: "Aruba", tier: C}
+  - {name: "Juniper", tier: C}
+  - {name: "Palo Alto", tier: C}
+  - {name: "Fortinet", tier: C}
+  - {name: "CrowdStrike", tier: C}
+  - {name: "SentinelOne", tier: C}
+  - {name: "Tenable", tier: C}
+  - {name: "Qualys", tier: C}
+  - {name: "Rapid7", tier: C}
+  - {name: "Trellix", tier: C}
+  - {name: "Proofpoint", tier: C}
+  - {name: "Bosch", tier: C}
+  - {name: "Tesla", tier: C}
+  - {name: "Rivian", tier: C}
+  - {name: "Lucid", tier: C}
+  - {name: "Epicor", tier: C}
+  - {name: "Infor", tier: C}
+  - {name: "Blue Yonder", tier: C}
+  - {name: "Manhattan Associates", tier: C}
+  - {name: "Oracle Cerner", tier: C}
+  - {name: "Philips", tier: C}
+  - {name: "GE Healthcare", tier: C}
+  - {name: "Optum", tier: C}
+  - {name: "Zoom", tier: C}
+  - {name: "Slack", tier: C}
+  - {name: "Box", tier: C}
+  - {name: "Docusign", tier: C}
+  - {name: "Unity", tier: C}
+  - {name: "Electronic Arts", tier: C}
+  - {name: "Sony", tier: C}
+  - {name: "Infosys", tier: D}
+  - {name: "Wipro", tier: D}
+  - {name: "HCLTech", tier: D}
+  - {name: "Tech Mahindra", tier: D}
+  - {name: "Cognizant", tier: D}
+  - {name: "IBM", tier: D}
+  - {name: "DXC", tier: D}
+  - {name: "NTT Data", tier: D}
+  - {name: "Fujitsu", tier: D}
+  - {name: "Genpact", tier: D}
+  - {name: "Kyndryl", tier: D}
+  - {name: "CGI", tier: D}
+  - {name: "Ness Digital", tier: D}
+  - {name: "Altimetrik", tier: D}
+  - {name: "Tata Elxsi", tier: D}
+  - {name: "KPIT", tier: D}
+  - {name: "Mastek", tier: D}
+  - {name: "Newgen", tier: D}
+  - {name: "Ramco", tier: D}
+  - {name: "Quess", tier: D}
+  - {name: "R Systems", tier: D}
+  - {name: "Rackspace", tier: D}
+  - {name: "Xoriant", tier: D}
+  - {name: "Synechron", tier: D}
+  - {name: "Trigent", tier: D}
+  - {name: "Saama", tier: D}
+  - {name: "Brillio", tier: D}
+  - {name: "Cloudera", tier: D}
+  - {name: "Wissen", tier: D}
+  - {name: "Lumen", tier: D}

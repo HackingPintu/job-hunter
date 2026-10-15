@@ -1,0 +1,135 @@
+﻿# Skill vocabulary used to read your CV and to match job descriptions.
+# canonical name: [aliases searched in text]. Add your own freely.
+skills:
+  java: [java, "java 8", "java 11", "java 17", "java 21", j2ee, jvm]
+  spring: [spring, "spring boot", "spring framework", "spring mvc", "spring cloud", "spring security", "spring data"]
+  hibernate: [hibernate, jpa]
+  kotlin: [kotlin]
+  scala: [scala]
+  python: [python, django, flask, fastapi]
+  golang: [golang, "go lang", "go programming"]
+  rust: [rust]
+  c++: ["c++", cpp]
+  c#: ["c#", ".net", dotnet, "asp.net"]
+  javascript: [javascript, js, ecmascript]
+  typescript: [typescript]
+  node.js: ["node.js", nodejs, node, nestjs]
+  react: [react, reactjs, "react.js", redux, "next.js", nextjs]
+  angular: [angular, angularjs]
+  vue: [vue, "vue.js", vuejs, nuxt]
+  html/css: [html, css, sass, tailwind]
+  php: [php, laravel]
+  ruby: [ruby, "ruby on rails", rails]
+  swift: [swift, swiftui]
+  android: [android, jetpack]
+  flutter: [flutter, dart]
+  react native: ["react native"]
+  sql: [sql, mysql, plsql, "pl/sql", "t-sql"]
+  postgresql: [postgres, postgresql]
+  mongodb: [mongodb, mongo]
+  redis: [redis, memcached]
+  cassandra: [cassandra, scylladb]
+  dynamodb: [dynamodb]
+  elasticsearch: [elasticsearch, opensearch, elk, solr]
+  oracle: [oracle]
+  nosql: [nosql]
+  kafka: [kafka, "kafka streams", confluent]
+  rabbitmq: [rabbitmq, activemq, "message queue", sqs, pubsub, "pub/sub"]
+  spark: [spark, pyspark, hadoop, hive, flink]
+  airflow: [airflow, dbt, etl, "data pipeline", "data pipelines"]
+  bigquery: [bigquery, snowflake, redshift, databricks]
+  microservices: [microservices, microservice, "service oriented", soa]
+  rest apis: [restful, "rest api", "rest apis", "restful api", "rest services", openapi, swagger]
+  grpc: [grpc, protobuf, thrift]
+  graphql: [graphql]
+  websockets: [websocket, websockets]
+  system design: ["system design", "distributed systems", "low level design", "high level design", lld, hld, scalability]
+  data structures: ["data structures", algorithms, dsa]
+  design patterns: ["design patterns", solid, oop, oops, "object oriented"]
+  multithreading: [multithreading, concurrency, "multi-threading", "concurrent programming"]
+  aws: [aws, ec2, s3, lambda, "amazon web services", ecs, eks, cloudformation]
+  azure: [azure]
+  gcp: [gcp, "google cloud"]
+  docker: [docker, containers, containerization]
+  kubernetes: [kubernetes, k8s, helm]
+  terraform: [terraform, ansible, "infrastructure as code", iac]
+  ci/cd: ["ci/cd", jenkins, "github actions", gitlab, "continuous integration", "continuous delivery", circleci]
+  linux: [linux, unix, bash, shell]
+  git: [git, github, bitbucket]
+  testing: [junit, mockito, testng, pytest, "unit testing", tdd, "test driven"]
+  selenium: [selenium, cypress, playwright, appium, "test automation", rest-assured, restassured]
+  performance: [jmeter, "performance testing", gatling, "load testing"]
+  observability: [prometheus, grafana, datadog, splunk, "new relic", opentelemetry, monitoring]
+  security: [oauth, jwt, "owasp", sso, saml, "application security"]
+  machine learning: ["machine learning", ml, "deep learning", tensorflow, pytorch, "scikit-learn", sklearn]
+  genai: [genai, "generative ai", llm, llms, rag, langchain, "prompt engineering", openai, "vector database", embeddings]
+  nlp: [nlp, "natural language processing", transformers, "hugging face"]
+  data analysis: [pandas, numpy, "data analysis", tableau, "power bi", powerbi, excel]
+  agile: [agile, scrum, jira, kanban]
+  blockchain: [blockchain, solidity, web3]
+  embedded: [embedded, firmware, rtos, "c programming", microcontroller]
+  salesforce: [salesforce, apex]
+  sap: [sap, abap]
+  servicenow: [servicenow]
+
+# Role families: choose what you are looking for. "search" feeds the search box of API-driven career sites.
+roles:
+  backend:
+    label: Backend / Java / API
+    include: [backend, back-end, "back end", "java developer", "java engineer", "api engineer", "server side", "application developer", "platform engineer", "services engineer"]
+    search: ["backend engineer", "software engineer backend", "java developer"]
+  fullstack:
+    label: Full-stack
+    include: ["full stack", full-stack, fullstack, "web developer"]
+    search: ["full stack developer", "software engineer"]
+  frontend:
+    label: Frontend / UI
+    include: [frontend, front-end, "front end", "ui engineer", "ui developer", "web ui", "react developer", "angular developer"]
+    search: ["frontend engineer", "ui developer"]
+  mobile:
+    label: Mobile (Android / iOS)
+    include: [android, ios, mobile, flutter, "react native"]
+    search: ["android developer", "ios developer", "mobile engineer"]
+  data:
+    label: Data engineering
+    include: ["data engineer", "data engineering", "etl", "big data", "analytics engineer", "data platform"]
+    search: ["data engineer"]
+  ml:
+    label: ML / AI engineering
+    include: ["machine learning", "ml engineer", "ai engineer", "applied scientist", "data scientist", "genai", "llm", "nlp", "research engineer"]
+    search: ["machine learning engineer", "ai engineer"]
+  devops:
+    label: DevOps / SRE / Cloud
+    include: [devops, sre, "site reliability", "cloud engineer", "infrastructure engineer", "platform engineer", "systems engineer"]
+    search: ["devops engineer", "site reliability engineer", "cloud engineer"]
+  qa:
+    label: QA / SDET
+    include: [sdet, "qa engineer", "test engineer", "quality engineer", "automation engineer", "software development engineer in test", "test automation"]
+    search: ["sdet", "qa automation engineer", "test engineer"]
+  security:
+    label: Security engineering
+    include: ["security engineer", "application security", "appsec", "cybersecurity", "security analyst"]
+    search: ["security engineer"]
+  embedded:
+    label: Embedded / Systems
+    include: [embedded, firmware, "systems software", "device driver", "kernel"]
+    search: ["embedded software engineer", "firmware engineer"]
+
+# Titles that identify a generic software role in any family.
+generic_software_titles: ["software engineer", "software development engineer", "software developer", sde, swe, "member of technical staff", mts, "developer", "engineer", "programmer", "technologist"]
+
+# Titles that are never relevant for an engineering job search.
+always_exclude: [sales, marketing, recruiter, "account executive", "customer success", "solutions consultant", "product manager", "program manager", "project manager", "business analyst", "telecom", "operations engineer", "legal counsel", "accountant", "hr business partner", "talent acquisition", "support specialist", "technical writer", "intern", internship, trainee, apprentice, "head of", director, vp, "vice president", "chief"]
+
+# Title words that belong to a role family. They are excluded when that family is not selected.
+family_exclusive_titles:
+  frontend: [frontend, front-end, "front end", "ui engineer", "ui developer"]
+  mobile: [ios, android, mobile, flutter]
+  data: ["data engineer", "data scientist", "analytics engineer"]
+  ml: ["machine learning", "ml engineer", "ai engineer", "applied scientist", "research scientist", "research engineer"]
+  devops: [devops, sre, "site reliability", "cloud engineer", "infrastructure engineer"]
+  qa: [sdet, "qa engineer", "test engineer", "quality engineer", "quality assurance", qa, "test automation"]
+  security: ["security engineer", "security analyst", "appsec"]
+  embedded: [embedded, firmware, hardware, fpga, asic, "device driver"]
+  other: [mainframe, "salesforce developer", "sap abap", consultant, "network engineer", "support engineer", "sales engineer", "solutions engineer", "customer engineer"]
+

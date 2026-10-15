@@ -1,0 +1,123 @@
+# Countries supported by the location filter and by the API-driven sources.
+# code2 -> SmartRecruiters, code3 -> Amazon, names -> text matching. cities: canonical name -> aliases.
+countries:
+  India:
+    code2: in
+    code3: IND
+    currency: INR
+    names: [india]
+    cities:
+      Bengaluru: [bengaluru, bangalore]
+      Hyderabad: [hyderabad, secunderabad]
+      Pune: [pune]
+      Chennai: [chennai]
+      Mumbai: [mumbai, navi mumbai, thane, bombay]
+      Delhi NCR: [delhi, new delhi, gurgaon, gurugram, noida, ghaziabad, faridabad, greater noida]
+      Kolkata: [kolkata, calcutta]
+      Ahmedabad: [ahmedabad, gandhinagar, gift city]
+      Kochi: [kochi, cochin, ernakulam]
+      Trivandrum: [trivandrum, thiruvananthapuram]
+      Coimbatore: [coimbatore]
+      Jaipur: [jaipur]
+      Indore: [indore]
+      Bhubaneswar: [bhubaneswar]
+      Chandigarh: [chandigarh, mohali, panchkula]
+      Nagpur: [nagpur]
+      Mysuru: [mysuru, mysore]
+      Vadodara: [vadodara, baroda]
+  United States:
+    code2: us
+    code3: USA
+    currency: USD
+    names: [united states, usa, "u.s.", us-remote]
+    cities:
+      San Francisco Bay Area: [san francisco, sunnyvale, mountain view, palo alto, san jose, menlo park, redwood city, santa clara, cupertino, oakland, south san francisco]
+      Seattle: [seattle, bellevue, redmond, kirkland]
+      New York: [new york, nyc, brooklyn, manhattan]
+      Austin: [austin]
+      Boston: [boston, cambridge, waltham]
+      Los Angeles: [los angeles, santa monica, irvine, san diego, culver city]
+      Chicago: [chicago]
+      Dallas: [dallas, plano, irving, fort worth]
+      Atlanta: [atlanta]
+      Denver: [denver, boulder]
+      Washington DC: [washington, arlington, reston, mclean]
+  United Kingdom:
+    code2: gb
+    code3: GBR
+    currency: GBP
+    names: [united kingdom, uk, england, scotland]
+    cities:
+      London: [london]
+      Manchester: [manchester]
+      Edinburgh: [edinburgh]
+      Cambridge: [cambridge]
+      Bristol: [bristol]
+  Germany:
+    code2: de
+    code3: DEU
+    currency: EUR
+    names: [germany, deutschland]
+    cities:
+      Berlin: [berlin]
+      Munich: [munich, münchen]
+      Hamburg: [hamburg]
+      Frankfurt: [frankfurt]
+  Netherlands:
+    code2: nl
+    code3: NLD
+    currency: EUR
+    names: [netherlands, holland]
+    cities:
+      Amsterdam: [amsterdam]
+      Rotterdam: [rotterdam]
+      Eindhoven: [eindhoven]
+  Canada:
+    code2: ca
+    code3: CAN
+    currency: CAD
+    names: [canada]
+    cities:
+      Toronto: [toronto, mississauga, markham]
+      Vancouver: [vancouver, burnaby]
+      Montreal: [montreal, montréal]
+      Ottawa: [ottawa]
+      Waterloo: [waterloo, kitchener]
+  Singapore:
+    code2: sg
+    code3: SGP
+    currency: SGD
+    names: [singapore]
+    cities:
+      Singapore: [singapore]
+  United Arab Emirates:
+    code2: ae
+    code3: ARE
+    currency: AED
+    names: [united arab emirates, uae]
+    cities:
+      Dubai: [dubai]
+      Abu Dhabi: [abu dhabi]
+  Australia:
+    code2: au
+    code3: AUS
+    currency: AUD
+    names: [australia]
+    cities:
+      Sydney: [sydney]
+      Melbourne: [melbourne]
+      Brisbane: [brisbane]
+  Ireland:
+    code2: ie
+    code3: IRL
+    currency: EUR
+    names: [ireland]
+    cities:
+      Dublin: [dublin]
+
+# Rough fixed-pay bands (LPA, India, 0-5 yrs experience) per company tier. Indicative only.
+india_tier_bands_lpa:
+  A: [28, 60]
+  B: [16, 45]
+  C: [10, 32]
+  D: [4, 14]

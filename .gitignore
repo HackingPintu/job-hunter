@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+
+# runtime data and personal files, never commit
+.jobhunter/
+.tmp_out/
+output/
+*.pkl
+jobs.db
+profile.yaml
+config.yaml
+*.docx
+*.pdf
+.env

@@ -1,0 +1,22 @@
+# Copy to profile.yaml and edit. Used by:  python -m jobhunter run --profile profile.yaml
+# Everything except yoe is optional.
+
+yoe: 2                      # years of experience
+country: India              # India, United States, United Kingdom, Germany, Netherlands, Canada, Singapore, United Arab Emirates, Australia, Ireland
+cities: [Bengaluru, Pune, Hyderabad]   # empty = anywhere in the country
+strict_cities: true         # false = other cities allowed, but ranked lower
+remote_anywhere: false      # include remote roles open worldwide
+
+roles: [backend]            # backend, fullstack, frontend, mobile, data, ml, devops, qa, security, embedded
+skills: [java, spring boot, python, aws]   # most important first (first 3 weigh most)
+must_have: []               # job text must mention at least one of these
+avoid: []                   # jobs mentioning these rank lower
+
+expected_lpa: 20            # India only. Hides company tiers that rarely pay this (indicative).
+tiers: [A, B, C, D]         # A dream, B stretch, C target, D safe/high volume
+
+freshness_days: 45          # ignore postings older than this
+min_score: 35               # hide matches below this score (0-100)
+apply_now_score: 65         # flag matches at or above this
+max_per_company: 12
+experience_margin: 2        # accept jobs asking up to yoe + this many years

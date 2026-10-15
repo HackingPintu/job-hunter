@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JobHunter - find the openings that actually fit you</title>
+<meta name="description" content="Open-source job finder. Upload your CV, set your experience and expectations, and get ranked openings pulled straight from company career sites.">
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--ink:#14161f;--muted:#6b7285;--line:#e4e7f0;--brand:#5b4bff;--brand2:#8a4dff;--ok:#16a34a;--warn:#f59e0b;--bad:#dc2626;--chip:#eef0fb;--shadow:0 6px 24px rgba(30,30,70,.07)}
+[data-theme=dark]{--bg:#0d0f17;--card:#161926;--ink:#eceefa;--muted:#9aa1b8;--line:#262a3d;--chip:#1f2336;--shadow:0 6px 24px rgba(0,0,0,.4)}
+*{box-sizing:border-box}body{margin:0;font:15px/1.5 Inter,"Segoe UI",system-ui,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+header.top{display:flex;align-items:center;gap:14px;padding:14px 28px;background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}
+.logo{font-weight:800;font-size:20px;letter-spacing:-.4px}.logo b{background:linear-gradient(90deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.spacer{flex:1}.iconbtn{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:7px 11px;cursor:pointer;font-size:14px}
+.hero{padding:52px 20px 24px;text-align:center;background:radial-gradient(1000px 300px at 50% -50%,rgba(91,75,255,.18),transparent)}
+.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.1;margin:0 0 12px;letter-spacing:-1.2px}.hero h1 span{background:linear-gradient(90deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:700px;margin:0 auto;color:var(--muted);font-size:17px}.badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.badge{background:var(--chip);border:1px solid var(--line);border-radius:99px;padding:5px 13px;font-size:13px;color:var(--muted)}.badge b{color:var(--ink)}
+main{max-width:1100px;margin:0 auto;padding:18px 20px 60px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin:16px 0;box-shadow:var(--shadow)}
+.card h2{margin:0 0 4px;font-size:18px}.card .sub{color:var(--muted);margin:0 0 14px;font-size:14px}
+.num{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--brand);color:#fff;font-size:13px;margin-right:8px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+label.l{display:block;font-weight:600;font-size:13px;margin-bottom:6px}label.l small{font-weight:400;color:var(--muted)}
+input[type=text],input[type=number],select{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit}
+input:focus,select:focus{outline:2px solid var(--brand);outline-offset:-1px}
+.drop{border:2px dashed var(--line);border-radius:14px;padding:26px;text-align:center;cursor:pointer;transition:.15s;background:var(--bg)}
+.drop:hover,.drop.over{border-color:var(--brand);background:var(--chip)}.drop b{display:block;font-size:16px}.drop span{color:var(--muted);font-size:13px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}.chip{display:inline-flex;align-items:center;gap:6px;background:var(--chip);border:1px solid var(--line);border-radius:99px;padding:4px 11px;font-size:13px;cursor:pointer;user-select:none}
+.chip.on{background:var(--brand);border-color:var(--brand);color:#fff}.chip .x{opacity:.6;cursor:pointer}.chip.static{cursor:default}
+.tags{display:flex;flex-wrap:wrap;gap:7px;padding:7px;border:1px solid var(--line);border-radius:10px;background:var(--bg);min-height:44px}
+.tags input{border:0!important;background:transparent!important;outline:0!important;flex:1;min-width:120px;padding:4px!important}
+.row{display:flex;gap:18px;flex-wrap:wrap;align-items:center}.switch{display:flex;gap:8px;align-items:center;font-size:14px;cursor:pointer}
+.btn{background:linear-gradient(90deg,var(--brand),var(--brand2));color:#fff;border:0;border-radius:12px;padding:13px 26px;font-size:16px;font-weight:700;cursor:pointer;box-shadow:0 8px 22px rgba(91,75,255,.35)}
+.btn:disabled{opacity:.6;cursor:wait}.btn.ghost{background:var(--card);color:var(--ink);border:1px solid var(--line);box-shadow:none;font-size:14px;padding:8px 14px}
+.hint{font-size:12.5px;color:var(--muted)}.privacy{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:13px;margin-top:10px}
+.bar{height:10px;background:var(--chip);border-radius:99px;overflow:hidden;margin:14px 0 8px}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--brand),var(--brand2));transition:width .3s}
+.tiles{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}.tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.tile b{font-size:28px;display:block;letter-spacing:-.5px}.tile span{color:var(--muted);font-size:13px}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:16px 0}.toolbar input[type=text]{max-width:280px}.toolbar select{width:auto}
+.job{display:grid;grid-template-columns:62px 1fr auto;gap:16px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:10px 0}
+.job.hot{border-left:5px solid var(--ok)}.job.applied{opacity:.55}
+.score{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:18px;color:#fff;background:var(--muted)}
+.score.hi{background:var(--ok)}.score.mid{background:var(--warn)}
+.job h3{margin:0;font-size:16.5px}.meta{color:var(--muted);font-size:13.5px;margin:3px 0 7px}.why{font-size:13px;color:var(--muted);margin-top:6px}
+.pill{display:inline-block;font-size:11.5px;border-radius:6px;padding:1px 7px;margin-right:6px;font-weight:700;color:#fff;vertical-align:1px}
+.pill.new{background:var(--bad)}.pill.fresh{background:var(--ok)}.pill.t{background:var(--brand)}
+.sk{display:inline-block;font-size:12px;background:var(--chip);border-radius:6px;padding:2px 8px;margin:2px 4px 2px 0}
+.actions{display:flex;flex-direction:column;gap:6px;min-width:96px}.actions a,.actions button{font-size:13px;text-align:center;border-radius:9px;padding:7px 12px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.actions a.go{background:var(--brand);border-color:var(--brand);color:#fff;font-weight:600}.actions .on{background:var(--chip);font-weight:700}
+.empty{text-align:center;padding:40px;color:var(--muted)}.sec h2{font-size:18px;margin:30px 0 8px}
+details summary{cursor:pointer;font-weight:600}.linkrow{margin:8px 0}.linkrow a{margin-right:12px}
+footer{text-align:center;color:var(--muted);padding:30px;font-size:13px}
+.hidden{display:none!important}.err{color:var(--bad);font-weight:600}
+@media(max-width:700px){.job{grid-template-columns:50px 1fr}.actions{grid-column:1/-1;flex-direction:row}.score{width:46px;height:46px;font-size:15px}header.top{padding:12px 16px}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="logo">&#127919; Job<b>Hunter</b></div>
+  <span class="badge hidden" id="genbadge"></span>
+  <div class="spacer"></div>
+  <a class="iconbtn" href="https://github.com/HackingPintu/job-hunter" target="_blank" rel="noopener">&#9733; GitHub</a>
+  <button class="iconbtn" id="theme" title="Toggle dark mode">&#9790;</button>
+</header>
+
+<section class="hero" id="hero">
+  <h1>Stop searching.<br><span>Start applying.</span></h1>
+  <p>JobHunter reads live openings straight from <b id="nco">300+</b> company career sites, then ranks them against <i>your</i> experience, skills and expectations. No sign-up, no ads, runs on your machine.</p>
+  <div class="badges"><span class="badge"><b>Live</b> career-site APIs</span><span class="badge"><b>Private</b> CV never leaves your device</span><span class="badge"><b>Free</b> &amp; open source</span></div>
+</section>
+
+<main>
+<form id="form" class="hidden" autocomplete="off">
+  <div class="card">
+    <h2><span class="num">1</span>Upload your CV <small class="hint">(optional, saves typing)</small></h2>
+    <p class="sub">We read your skills, experience and likely roles. PDF, DOCX or TXT. Parsed in memory and never stored.</p>
+    <div class="drop" id="drop"><b>Drop your CV here or click to browse</b><span>PDF &middot; DOCX &middot; TXT, up to 5 MB</span></div>
+    <input type="file" id="cv" accept=".pdf,.docx,.txt,.md" class="hidden">
+    <div id="cvres" class="hidden" style="margin-top:14px"></div>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">2</span>About you</h2>
+    <p class="sub">This decides seniority, skill matching and which titles are shown.</p>
+    <div class="grid">
+      <div><label class="l">Years of experience</label><input type="number" id="yoe" min="0" max="40" step="0.1" placeholder="e.g. 2" required></div>
+      <div><label class="l">Expected CTC <small>(LPA, India only, optional)</small></label><input type="number" id="lpa" min="0" step="1" placeholder="e.g. 20"><div class="hint" id="lpahint">Hides company tiers that rarely pay this. Indicative only.</div></div>
+    </div>
+    <div style="margin-top:16px"><label class="l">Roles you want</label><div class="chips" id="roles"></div></div>
+    <div class="grid" style="margin-top:16px">
+      <div><label class="l">Your top skills <small>(first 3 weigh most)</small></label><div class="tags" id="skills"><input type="text" list="skilllist" placeholder="java, spring, kafka... press Enter"></div></div>
+      <div><label class="l">Must mention <small>(job must include one of these, optional)</small></label><div class="tags" id="must"><input type="text" list="skilllist" placeholder="e.g. java"></div></div>
+      <div><label class="l">Avoid <small>(ranks lower, optional)</small></label><div class="tags" id="avoid"><input type="text" list="skilllist" placeholder="e.g. php, .net"></div></div>
+    </div>
+    <datalist id="skilllist"></datalist>
+  </div>
+
+  <div class="card">
+    <h2><span class="num">3</span>Where &amp; what kind of company</h2>
+    <div class="grid">
+      <div><label class="l">Country</label><select id="country"></select></div>
+      <div><label class="l">Freshness</label><select id="fresh"><option value="7">Posted in last 7 days</option><option value="14">Last 14 days</option><option value="30">Last 30 days</option><option value="45" selected>Last 45 days</option><option value="90">Last 90 days</option></select></div>
+      <div><label class="l">Minimum match score: <b id="msv">35</b></label><input type="range" id="minscore" min="20" max="80" value="35" style="width:100%"></div>
+    </div>
+    <div style="margin-top:16px"><label class="l">Cities <small>(leave empty for anywhere in the country)</small></label><div class="chips" id="cities"></div></div>
+    <div class="row" style="margin-top:14px">
+      <label class="switch"><input type="checkbox" id="strict" checked> Only these cities (off = just rank them higher)</label>
+      <label class="switch"><input type="checkbox" id="remote"> Include remote roles from any country</label>
+    </div>
+    <div style="margin-top:16px"><label class="l">Company tiers</label><div class="chips" id="tiers"></div>
+      <div class="hint">A = dream (hardest, best pay) &middot; B = strong product &middot; C = solid mid-size &amp; GCCs &middot; D = services (high volume)</div></div>
+  </div>
+
+  <div class="row"><button class="btn" id="go" type="submit">&#128269; Find my jobs</button><button class="btn ghost" type="button" id="reset">Reset</button></div>
+  <div class="privacy">&#128274; Everything runs locally. Your CV and profile are saved only in this browser.</div>
+</form>
+
+<div id="progress" class="card hidden"><h2 id="ptitle">Scanning career sites...</h2><div class="bar"><i id="pbar"></i></div><div class="hint" id="pmsg">Starting...</div></div>
+<div id="error" class="card err hidden"></div>
+
+<div id="results" class="hidden">
+  <div class="tiles" id="tiles"></div>
+  <div class="toolbar">
+    <input type="text" id="q" placeholder="Filter: company, title, city, skill">
+    <select id="fcity"><option value="">All cities</option></select>
+    <select id="ftier"><option value="">All tiers</option></select>
+    <select id="sort"><option value="score">Best match</option><option value="date">Newest</option><option value="company">Company A-Z</option></select>
+    <select id="fstatus"><option value="">All</option><option value="open">Not applied</option><option value="saved">Saved</option><option value="applied">Applied</option></select>
+    <label class="switch"><input type="checkbox" id="fhot"> Apply-now only</label>
+    <label class="switch"><input type="checkbox" id="ffresh"> Fresh (3 days)</label>
+    <span class="spacer"></span>
+    <button class="btn ghost" id="csv" type="button">Export CSV</button>
+    <button class="btn ghost" id="again" type="button">Edit search</button>
+  </div>
+  <div id="list"></div>
+  <div class="sec" id="boards"></div>
+</div>
+</main>
+<footer>Built with JobHunter &middot; MIT licensed &middot; Scores are heuristics, always read the job description. Pay bands are indicative.</footer>
+
+<script>
+const PRELOAD=/*__PRELOAD__*/null;
+const $=s=>document.querySelector(s);
+function h(tag,attrs,...kids){const e=document.createElement(tag);for(const[k,v]of Object.entries(attrs||{})){if(k==='class')e.className=v;else if(k.startsWith('on'))e.addEventListener(k.slice(2),v);else if(v!==null&&v!==undefined&&v!==false)e.setAttribute(k,v===true?'':v)}for(const c of kids.flat()){if(c==null)continue;e.append(c.nodeType?c:document.createTextNode(c))}return e}
+const safeUrl=u=>/^https?:\/\//i.test(u)?u:'#';
+const store={get:(k,d)=>{try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}},set:(k,v)=>localStorage.setItem(k,JSON.stringify(v))};
+let META=null,RESULT=null,TAGS={};
+document.documentElement.dataset.theme=store.get('jh_theme','light');
+$('#theme').onclick=()=>{const t=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=t;store.set('jh_theme',t)};
+
+function tagInput(id,initial){
+  const box=$('#'+id),input=box.querySelector('input');let items=[];
+  const render=()=>{box.querySelectorAll('.chip').forEach(c=>c.remove());items.forEach((t,i)=>box.insertBefore(h('span',{class:'chip static'},t,h('span',{class:'x',onclick:()=>{items.splice(i,1);render()}},'×')),input))};
+  const add=v=>{v=v.trim().toLowerCase();if(v&&!items.includes(v)){items.push(v);render()}};
+  input.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===','){e.preventDefault();add(input.value);input.value=''}else if(e.key==='Backspace'&&!input.value&&items.length){items.pop();render()}});
+  input.addEventListener('change',()=>{add(input.value);input.value=''});
+  input.addEventListener('blur',()=>{add(input.value);input.value=''});
+  TAGS[id]={get:()=>items,set:a=>{items=[...new Set(a.map(x=>x.toLowerCase()))];render()},add};
+  if(initial)TAGS[id].set(initial);
+}
+function chipGroup(id,options,selected){
+  const box=$('#'+id);box.innerHTML='';
+  options.forEach(o=>{const c=h('span',{class:'chip'+(selected.includes(o.id)?' on':''),title:o.title||'',onclick:()=>c.classList.toggle('on')},o.label);c.dataset.id=o.id;box.append(c)});
+}
+const picked=id=>[...document.querySelectorAll('#'+id+' .chip.on')].map(c=>c.dataset.id);
+const tierOpts=()=>META.tiers.map(t=>({id:t.id,label:t.id+' · '+t.label}));
+
+function fillCities(country,sel=[]){
+  const cs=META.countries[country].cities;chipGroup('cities',cs.map(c=>({id:c,label:c})),sel);
+  $('#lpahint').textContent=country==='India'?'Hides company tiers that rarely pay this. Indicative only.':'Expected CTC filter is available for India only.';
+  $('#lpa').disabled=country!=='India';
+}
+async function init(){
+  if(PRELOAD){$('#hero').classList.add('hidden');showResults(PRELOAD);$('#again').classList.add('hidden');$('#genbadge').textContent='Report generated '+PRELOAD.generated;$('#genbadge').classList.remove('hidden');return}
+  META=await (await fetch('/api/meta')).json();
+  $('#nco').textContent=META.companies_total+'+';
+  $('#form').classList.remove('hidden');
+  const cs=$('#country');Object.keys(META.countries).sort((a,b)=>(a==='India'?-1:b==='India'?1:a.localeCompare(b))).forEach(c=>cs.append(h('option',{value:c},c)));
+  chipGroup('roles',META.roles,['backend']);chipGroup('tiers',tierOpts(),['A','B','C','D']);
+  $('#skilllist').append(...META.skills.map(s=>h('option',{value:s})));
+  tagInput('skills');tagInput('must');tagInput('avoid');
+  cs.onchange=()=>fillCities(cs.value);cs.value='India';fillCities('India');
+  $('#minscore').oninput=e=>$('#msv').textContent=e.target.value;
+  loadForm();
+}
+function formData(){return{yoe:parseFloat($('#yoe').value||0),expected_lpa:$('#lpa').value||null,roles:picked('roles'),skills:TAGS.skills.get(),cv_skills:store.get('jh_cvskills',[]),must_have:TAGS.must.get(),avoid:TAGS.avoid.get(),country:$('#country').value,cities:picked('cities'),strict_cities:$('#strict').checked,remote_anywhere:$('#remote').checked,tiers:picked('tiers'),freshness_days:+$('#fresh').value,min_score:+$('#minscore').value}}
+function saveForm(){store.set('jh_form',formData())}
+function loadForm(){const f=store.get('jh_form');if(!f||!META.countries[f.country])return;$('#yoe').value=f.yoe||'';$('#lpa').value=f.expected_lpa||'';$('#country').value=f.country;fillCities(f.country,f.cities||[]);chipGroup('roles',META.roles,f.roles||[]);chipGroup('tiers',tierOpts(),f.tiers||['A','B','C','D']);TAGS.skills.set(f.skills||[]);TAGS.must.set(f.must_have||[]);TAGS.avoid.set(f.avoid||[]);$('#strict').checked=f.strict_cities!==false;$('#remote').checked=!!f.remote_anywhere;$('#fresh').value=f.freshness_days;$('#minscore').value=f.min_score;$('#msv').textContent=f.min_score}
+$('#reset').onclick=()=>{localStorage.removeItem('jh_form');localStorage.removeItem('jh_cvskills');location.reload()};
+
+const drop=$('#drop'),cv=$('#cv');
+drop.onclick=()=>cv.click();
+['dragover','dragenter'].forEach(e=>drop.addEventListener(e,ev=>{ev.preventDefault();drop.classList.add('over')}));
+['dragleave','drop'].forEach(e=>drop.addEventListener(e,ev=>{ev.preventDefault();drop.classList.remove('over')}));
+drop.addEventListener('drop',ev=>{if(ev.dataTransfer.files[0])uploadCV(ev.dataTransfer.files[0])});
+cv.onchange=()=>{if(cv.files[0])uploadCV(cv.files[0])};
+async function uploadCV(file){
+  const box=$('#cvres');box.classList.remove('hidden');box.textContent='Reading '+file.name+'...';
+  const fd=new FormData();fd.append('cv',file);
+  try{const r=await fetch('/api/analyze-cv',{method:'POST',body:fd});const d=await r.json();if(!r.ok)throw new Error(d.error||'Could not read file');
+    store.set('jh_cvskills',d.skills);
+    if(d.yoe&&!$('#yoe').value)$('#yoe').value=d.yoe;
+    if(d.roles.length)chipGroup('roles',META.roles,d.roles);
+    if(!TAGS.skills.get().length)TAGS.skills.set(d.skills.slice(0,8));
+    box.innerHTML='';box.append(h('div',{},h('b',{},'✓ '+file.name),' read. Found ',h('b',{},String(d.skills.length)),' skills'+(d.yoe?', about '+d.yoe+' years of experience':'')+'. Tap a skill to add it to your top skills:'),
+      h('div',{class:'chips',style:'margin-top:8px'},d.skills.slice(0,30).map(s=>h('span',{class:'chip',onclick:()=>TAGS.skills.add(s)},s))),
+      h('div',{class:'hint',style:'margin-top:8px'},'Check the values below, we only guess from your CV.'))
+  }catch(e){box.innerHTML='';box.append(h('span',{class:'err'},e.message))}
+}
+
+$('#form').onsubmit=async e=>{
+  e.preventDefault();saveForm();const body=formData();
+  $('#go').disabled=true;$('#form').classList.add('hidden');$('#hero').classList.add('hidden');$('#progress').classList.remove('hidden');$('#error').classList.add('hidden');$('#results').classList.add('hidden');
+  try{
+    const r=await fetch('/api/search',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});const d=await r.json();if(!r.ok)throw new Error(d.error);
+    for(;;){await new Promise(s=>setTimeout(s,900));const s=await (await fetch('/api/status/'+d.id)).json();
+      $('#pbar').style.width=(s.total?Math.round(s.done*100/s.total):5)+'%';$('#pmsg').textContent=s.message||'';
+      if(s.state==='error')throw new Error(s.message);
+      if(s.state==='done'){const res=await (await fetch('/api/results/'+d.id)).json();showResults(res);break}}
+  }catch(err){$('#error').textContent='Something went wrong: '+err.message;$('#error').classList.remove('hidden');$('#form').classList.remove('hidden')}
+  $('#progress').classList.add('hidden');$('#go').disabled=false;
+};
+$('#again').onclick=()=>{$('#results').classList.add('hidden');$('#form').classList.remove('hidden');$('#hero').classList.remove('hidden');window.scrollTo(0,0)};
+
+const status=store.get('jh_status',{});
+function setStatus(url,s){if(status[url]===s)delete status[url];else status[url]=s;store.set('jh_status',status);renderList()}
+function showResults(r){
+  RESULT=r;$('#results').classList.remove('hidden');
+  const st=r.stats;
+  $('#tiles').replaceChildren(...[[st.matches,'matching jobs'],[st.hot,'apply-now (high match)'],[st.new||r.jobs.filter(j=>j.fresh).length,st.new?'new since last run':'posted in last 3 days'],[st.sources_ok+'/'+st.companies,'career sites scanned'],[st.fetched.toLocaleString(),'openings read']].map(([n,l])=>h('div',{class:'tile'},h('b',{},String(n)),h('span',{},l))));
+  const cities=[...new Set(r.jobs.flatMap(j=>j.location.split('|').map(x=>x.trim().split(',')[0]).filter(Boolean)))].sort();
+  $('#fcity').replaceChildren(h('option',{value:''},'All cities'),...cities.slice(0,60).map(c=>h('option',{value:c},c)));
+  const tiers=[...new Set(r.jobs.map(j=>j.tier))].sort();
+  $('#ftier').replaceChildren(h('option',{value:''},'All tiers'),...tiers.map(t=>h('option',{value:t},'Tier '+t+' · '+(r.tier_label[t]||''))));
+  ['q','fcity','ftier','sort','fstatus','fhot','ffresh'].forEach(id=>{$('#'+id).oninput=renderList;$('#'+id).onchange=renderList});
+  $('#csv').dataset.id=r.id||'';
+  renderList();renderBoards();
+}
+function visible(){
+  const q=$('#q').value.toLowerCase(),c=$('#fcity').value,t=$('#ftier').value,s=$('#fstatus').value,hot=$('#fhot').checked,fr=$('#ffresh').checked;
+  let js=RESULT.jobs.filter(j=>{const st=status[j.url]||'';
+    if(q&&!(j.company+' '+j.title+' '+j.location+' '+j.skills.join(' ')).toLowerCase().includes(q))return false;
+    if(c&&!j.location.includes(c))return false;if(t&&j.tier!==t)return false;if(hot&&!j.hot)return false;if(fr&&!j.fresh&&!j.is_new)return false;
+    if(s==='open'&&st==='applied')return false;if(s==='saved'&&st!=='saved')return false;if(s==='applied'&&st!=='applied')return false;return true});
+  const so=$('#sort').value;
+  if(so==='date')js.sort((a,b)=>(b.posted||'').localeCompare(a.posted||''));else if(so==='company')js.sort((a,b)=>a.company.localeCompare(b.company));else js.sort((a,b)=>b.score-a.score);
+  return js;
+}
+function renderList(){
+  const js=visible(),box=$('#list');
+  if(!js.length){box.replaceChildren(h('div',{class:'empty'},RESULT.jobs.length?'No jobs match these filters.':'No matches. Try more cities, a wider freshness window, more tiers or a lower minimum score.'));return}
+  box.replaceChildren(...js.slice(0,300).map(j=>{const st=status[j.url]||'';
+    return h('div',{class:'job'+(j.hot?' hot':'')+(st==='applied'?' applied':'')},
+      h('div',{class:'score '+(j.hot?'hi':j.score>=50?'mid':'')},String(j.score)),
+      h('div',{},h('h3',{},j.is_new?h('span',{class:'pill new'},'NEW'):null,!j.is_new&&j.fresh?h('span',{class:'pill fresh'},'FRESH'):null,j.title),
+        h('div',{class:'meta'},h('b',{},j.company),' ',h('span',{class:'pill t'},'Tier '+j.tier),' · ',j.location||'Location on posting',j.posted?' · posted '+j.posted:'',j.min_years!=null?' · '+j.min_years+'+ yrs':''),
+        h('div',{},j.skills.slice(0,10).map(s=>h('span',{class:'sk'},s))),
+        j.why&&j.why.length?h('div',{class:'why'},'Why: '+j.why.join(' · ')):null),
+      h('div',{class:'actions'},h('a',{class:'go',href:safeUrl(j.url),target:'_blank',rel:'noopener noreferrer'},'Apply ↗'),
+        h('button',{class:st==='saved'?'on':'',onclick:()=>setStatus(j.url,'saved')},st==='saved'?'★ Saved':'☆ Save'),
+        h('button',{class:st==='applied'?'on':'',onclick:()=>setStatus(j.url,'applied')},st==='applied'?'✓ Applied':'Mark applied')))}));
+}
+function renderBoards(){
+  const r=RESULT,box=$('#boards');box.replaceChildren();
+  if(r.manual&&r.manual.length){box.append(h('h2',{},'More companies ('+r.manual.length+') · no public API, open their listings'),h('div',{class:'chips'},r.manual.map(m=>h('a',{class:'chip',href:safeUrl(m.url),target:'_blank',rel:'noopener noreferrer'},m.name))))}
+  box.append(h('h2',{},'One-click searches on job boards'));
+  (r.boards||[]).forEach(b=>box.append(h('div',{class:'linkrow'},h('b',{},b.query+': '),b.links.map(([n,u])=>h('a',{href:safeUrl(u),target:'_blank',rel:'noopener noreferrer'},n)))));
+  box.append(h('div',{class:'linkrow'},(r.extra_boards||[]).map(([n,u])=>h('a',{href:safeUrl(u),target:'_blank',rel:'noopener noreferrer'},n))));
+  box.append(h('h2',{},'Source health'),h('details',{},h('summary',{},r.stats.sources_ok+'/'+r.stats.companies+' sources responded'),h('div',{class:'hint'},r.health.map(x=>(x.ok?'✓ ':'✗ ')+x.name+(x.ok?'':' ('+x.info+')')).join(' · '))));
+}
+$('#csv').onclick=()=>{
+  const q=v=>'"'+String(v??'').replace(/"/g,'""')+'"';
+  const rows=[['score','company','tier','title','location','min_years','skills','posted','url'],...visible().map(j=>[j.score,j.company,j.tier,j.title,j.location,j.min_years??'',j.skills.join('; '),j.posted||'',j.url])];
+  const a=h('a',{href:URL.createObjectURL(new Blob([rows.map(r=>r.map(q).join(',')).join('\n')],{type:'text/csv'})),download:'jobhunter-results.csv'});a.click();
+};
+init();
+</script>
+</body>
+</html>

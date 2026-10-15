@@ -1,0 +1,284 @@
+# tier|Company name|comma separated ATS slugs to probe
+A|Stripe|stripe
+A|Databricks|databricks
+A|Uber|uber
+A|Airbnb|airbnb
+A|Coinbase|coinbase
+A|Datadog|datadog
+A|Cloudflare|cloudflare
+A|MongoDB|mongodb
+A|Snowflake|snowflake
+A|Elastic|elastic
+A|Confluent|confluent
+A|HashiCorp|hashicorp
+A|Figma|figma
+A|Notion|notion
+A|Canva|canva
+A|Grammarly|grammarly
+A|Pinterest|pinterest
+A|Roblox|roblox
+A|Reddit|reddit
+A|Dropbox|dropbox
+A|Splunk|splunk
+A|Nvidia|nvidia
+A|Qualcomm|qualcomm
+A|Okta|okta
+A|Twilio|twilio
+A|Rubrik|rubrik
+A|Anthropic|anthropic
+A|OpenAI|openai
+A|Palantir|palantir
+A|Robinhood|robinhood
+A|Instacart|instacart,maplebear
+A|DoorDash|doordash
+A|Lyft|lyft
+A|Gitlab|gitlab
+A|Zscaler|zscaler
+A|Sumo Logic|sumologic
+A|New Relic|newrelic
+A|PagerDuty|pagerduty
+A|Fivetran|fivetran
+A|Cohesity|cohesity
+A|Pure Storage|purestorage
+A|NetApp|netapp
+A|Druva|druva
+A|Zendesk|zendesk
+A|HubSpot|hubspot
+A|Autodesk|autodesk
+A|Workato|workato
+A|Celonis|celonis
+B|Razorpay|razorpaysoftwareprivatelimited,razorpay
+B|Groww|groww
+B|PhonePe|phonepe
+B|CRED|cred
+B|Meesho|meesho
+B|Paytm|paytm
+B|Zepto|zepto,zeptonow
+B|Swiggy|swiggy
+B|Dream11|dreamsports,dream11
+B|Sprinklr|sprinklr
+B|InMobi|inmobi
+B|Arcesium|arcesium
+B|ShareChat|sharechat,mohalla
+B|Dunzo|dunzo
+B|Slice|sliceit,slice
+B|Jupiter|jupiter,jupitermoney
+B|Navi|navi,navitech
+B|Cars24|cars24
+B|Spinny|spinny
+B|Urban Company|urbancompany,urbanclap
+B|Licious|licious
+B|Ola|olacabs,ola
+B|Ola Electric|olaelectric
+B|Lenskart|lenskart
+B|Nykaa|nykaa
+B|PharmEasy|pharmeasy
+B|Practo|practo
+B|Unacademy|unacademy
+B|PhysicsWallah|physicswallah
+B|upGrad|upgrad
+B|BrowserStack|browserstack
+B|Chargebee|chargebee
+B|Whatfix|whatfix
+B|Clevertap|clevertap
+B|MoEngage|moengage
+B|WebEngage|webengage
+B|Innovaccer|innovaccer
+B|Darwinbox|darwinbox
+B|Zoomcar|zoomcar
+B|Rapido|rapido
+B|BharatPe|bharatpe
+B|MobiKwik|mobikwik
+B|Pine Labs|pinelabs
+B|Cashfree|cashfree,cashfreepayments
+B|Open Financial|open,openmoney
+B|Zerodha|zerodha
+B|Upstox|upstox
+B|Angel One|angelone
+B|Policybazaar|policybazaar,pbfintech
+B|Acko|acko
+B|Digit Insurance|godigit,digit
+B|Kreditbee|kreditbee
+B|Moneyview|moneyview
+B|Park+|parkplus
+B|Eightfold|eightfold,eightfoldai
+B|Hasura|hasura
+B|Postman|postman
+B|Gupshup|gupshup
+B|Exotel|exotel
+B|Yellow.ai|yellowai,yellow-ai
+B|Haptik|haptik
+B|Ather Energy|atherenergy,ather
+B|Mindtickle|mindtickle
+B|Freshworks|freshworks
+B|Zeta|zeta
+B|Coupa|coupa
+B|Juspay|juspay
+B|Thoughtspot|thoughtspot
+B|Nutanix|nutanix
+B|Flipkart|flipkart
+B|Games24x7|games24x7
+B|MPL|mpl,mobilepremierleague
+B|Zomato Eternal|zomato,eternal
+B|Delhivery|delhivery
+B|Shadowfax|shadowfax
+B|Porter|porter,porterin
+B|BlackBuck|blackbuck
+B|Rebel Foods|rebelfoods
+B|Country Delight|countrydelight
+B|Zetwerk|zetwerk
+B|Udaan|udaan
+B|OfBusiness|ofbusiness
+B|Skit.ai|skitai
+B|Sarvam AI|sarvam,sarvamai
+B|Krutrim|krutrim
+B|Observe.AI|observeai,observe-ai
+B|Uniphore|uniphore
+B|Fractal|fractal,fractalanalytics
+B|Tredence|tredence
+B|Mu Sigma|musigma
+B|Gojek|gojek
+B|Grab|grab
+B|Sea Group|sea,seagroup
+B|Rippling|rippling
+B|Deel|deel
+B|Remote|remote
+B|Toast|toast
+B|Medallia|medallia
+B|Sapient|sapient
+C|Sabre|sabre
+C|Amadeus|amadeus
+C|Expedia|expedia
+C|Booking.com|bookingcom,booking
+C|MakeMyTrip|makemytrip
+C|Cleartrip|cleartrip
+C|Ixigo|ixigo
+C|Yatra|yatra
+C|EaseMyTrip|easemytrip
+C|Thoughtworks|thoughtworks
+C|EPAM|epam
+C|Nagarro|nagarro
+C|Globant|globant
+C|Persistent|persistent,persistentsystems
+C|Publicis Sapient|publicissapient
+C|Hexaware|hexaware
+C|Mphasis|mphasis
+C|Zensar|zensar
+C|Cyient|cyient
+C|Mindtree|mindtree
+C|LTIMindtree|ltimindtree
+C|Coforge|coforge
+C|Birlasoft|birlasoft
+C|Sonata Software|sonata,sonatasoftware
+C|Happiest Minds|happiestminds
+C|Virtusa|virtusa
+C|Tekion|tekion
+C|Gainsight|gainsight
+C|Icertis|icertis
+C|Mckinsey|mckinsey
+C|Bain|bain
+C|Visa|visa
+C|Mastercard|mastercard
+C|PayPal|paypal
+C|Adyen|adyen
+C|Wise|wise,transferwise
+C|Klarna|klarna
+C|Revolut|revolut
+C|Checkout.com|checkoutcom,checkout
+C|Plaid|plaid
+C|Brex|brex
+C|Ramp|ramp
+C|Gusto|gusto
+C|Squarespace|squarespace
+C|Shopify|shopify
+C|Wix|wix
+C|Atlassian|atlassian
+C|Intuit|intuit
+C|Salesforce|salesforce
+C|ServiceNow|servicenow
+C|Workday|workday
+C|VMware|vmware
+C|Veeam|veeam
+C|Commvault|commvault
+C|Ivanti|ivanti
+C|BMC|bmc,bmcsoftware
+C|Informatica|informatica
+C|Talend|talend
+C|Sitecore|sitecore
+C|Veritas|veritas
+C|Quest Software|quest,questsoftware
+C|Nutanix|nutanix
+C|Aruba|aruba
+C|Juniper|juniper
+C|Arista|arista,aristanetworks
+C|Palo Alto|paloaltonetworks
+C|Fortinet|fortinet
+C|CrowdStrike|crowdstrike
+C|SentinelOne|sentinelone
+C|Tenable|tenable
+C|Qualys|qualys
+C|Rapid7|rapid7
+C|Mcafee|mcafee
+C|Trellix|trellix
+C|Netskope|netskope
+C|Sophos|sophos
+C|Proofpoint|proofpoint
+C|Bosch|bosch
+C|Continental|continental
+C|Tesla|tesla
+C|Rivian|rivian
+C|Lucid|lucid
+C|Epicor|epicor
+C|Infor|infor
+C|Blue Yonder|blueyonder
+C|Manhattan Associates|manhattanassociates
+C|Oracle Cerner|cerner
+C|Philips|philips
+C|GE Healthcare|gehealthcare
+C|Optum|optum
+C|Zoom|zoom
+C|Slack|slack
+C|Box|box
+C|Docusign|docusign
+C|Twitch|twitch
+C|Unity|unity
+C|Epic Games|epicgames
+C|Riot Games|riotgames
+C|Electronic Arts|ea,electronicarts
+C|Sony|sony
+D|TCS|tcs
+D|Infosys|infosys
+D|Wipro|wipro
+D|HCLTech|hcltech,hcl
+D|Tech Mahindra|techmahindra
+D|Cognizant|cognizant
+D|Accenture|accenture
+D|Capgemini|capgemini
+D|IBM|ibm
+D|DXC|dxc
+D|NTT Data|nttdata
+D|Fujitsu|fujitsu
+D|Genpact|genpact
+D|Kyndryl|kyndryl
+D|CGI|cgi
+D|Ness Digital|ness
+D|Altimetrik|altimetrik
+D|Tata Elxsi|tataelxsi
+D|KPIT|kpit
+D|Mastek|mastek
+D|Newgen|newgen
+D|Ramco|ramco
+D|Quess|quess
+D|R Systems|rsystems
+D|Rackspace|rackspace
+D|Xoriant|xoriant
+D|Synechron|synechron
+D|Sutherland|sutherland
+D|Trigent|trigent
+D|Saama|saama
+D|Brillio|brillio
+D|Valuelabs|valuelabs
+D|Cloudera|cloudera
+D|Capco|capco
+D|Wissen|wissen
+D|Lumen|lumen

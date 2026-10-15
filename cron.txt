@@ -1,0 +1,2 @@
+# Run JobHunter every day with cron:
+#   0 9,18 * * *  cd /path/to/job-hunter && python -m jobhunter run --profile profile.yaml --notify
